@@ -11,7 +11,8 @@ public class Direction {
     Map<Character, Character> leftDirections;
     Map<Character, Character> rightDirectios;
 
-    public Direction() {
+    public Direction(char headDirection) {
+        this.headDirection=headDirection;
         leftDirections = new HashMap<>();
         rightDirectios = new HashMap<>();
         setLeftDirections();
@@ -19,10 +20,10 @@ public class Direction {
     }
 
     private void setRightDirections() {
-        leftDirections.put('N','W');
-        leftDirections.put('W','S');
-        leftDirections.put('S','E');
-        leftDirections.put('E','N');
+        rightDirectios.put('N','E');
+        rightDirectios.put('W','N');
+        rightDirectios.put('S','W');
+        rightDirectios.put('E','S');
     }
 
     public void setLeftDirections() {
@@ -36,7 +37,7 @@ public class Direction {
         return leftDirections.get(ch);
     }
 
-    public char getRightDirectios(char ch) {
+    public char getRightDirections(char ch) {
         return rightDirectios.get(ch);
     }
 
