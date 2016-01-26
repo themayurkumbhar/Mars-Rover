@@ -22,7 +22,7 @@ public class Rover {
             } else if (currentInstruction == 'R') {
                 direction.setHeadDirection(direction.getRightDirections(direction.getHeadDirection()));
             } else if (currentInstruction == 'M') {
-                position.setNewPosition(direction.getHeadDirection());
+                position.moveForward(direction.getHeadDirection());
             }
         }
     }

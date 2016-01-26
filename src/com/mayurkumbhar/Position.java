@@ -16,7 +16,7 @@ public class Position {
         this.maxY = maxY;
     }
 
-    public void setNewPosition(char headDirection) {
+    public void moveForward(char headDirection) {
         switch (headDirection) {
             case 'N':
                 if (y + 1 <= maxY) {
